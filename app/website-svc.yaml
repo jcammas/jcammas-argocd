@@ -5,11 +5,11 @@ metadata:
     app: argocdrocks
   name: website-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: argocdrocks
   ports:
-    - name: http
-      port: 80
+    - port: 8888
+      nodePort: 30888
+      targetPort: 8888
       protocol: TCP
-      targetPort: 80
