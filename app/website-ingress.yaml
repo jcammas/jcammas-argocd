@@ -9,9 +9,9 @@ metadata:
     traefik.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
-      paths:
-      - path: /app
-        backend:
-          serviceName: website-service
-          servicePort: 80
+    - http:
+        paths:
+          - path: /app
+            backend:
+              serviceName: website-service
+              servicePort: 80
